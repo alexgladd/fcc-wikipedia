@@ -20,11 +20,11 @@
         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
           <div class="input-group input-group-lg wsearch-group">
             <span class="input-group-btn">
-              <a href="https://en.wikipedia.org/wiki/Special:Random" role="button" class="btn btn-default" target="_blank"><i class="fa fa-random"></i></a>
+              <a href="https://en.wikipedia.org/wiki/Special:Random" role="button" class="btn btn-default fix-btn" target="_blank"><i class="fa fa-random"></i></a>
             </span>
-            <input type="text" class="form-control text-center" placeholder="Search Wikipedia...">
+            <input id="wsearch-input" type="text" class="form-control text-center" placeholder="Search Wikipedia...">
             <span class="input-group-btn">
-              <button type="button" class="btn btn-info wsearch-btn"><i class="fa fa-search"></i> Search</button>
+              <button id="wsearch-btn" type="button" class="btn btn-info wsearch-btn fix-btn"><i class="fa fa-search"></i> Search</button>
             </span>
           </div>
         </div>
@@ -34,7 +34,45 @@
 
   <!-- search results -->
   <main>
+    <div id="wsearch-results" class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="#" class="wsearch-result">
+            <div class="wsearch-result-a">
+              <h3>Annapolis, Maryland</h3>
+              <p><span class="searchmatch">Annapolis</span> (/əˈnæpəlᵻs/) is the capital of the U.S. state of <span class="searchmatch">Maryland</span>, as well as the county seat of Anne Arundel County. Situated on the Chesapeake Bay</p>
+            </div>
+          </a>
+        </div>
 
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="#" class="wsearch-result">
+            <div class="wsearch-result-b">
+              <h3>Annapolis, Maryland</h3>
+              <p><span class="searchmatch">Annapolis</span> (/əˈnæpəlᵻs/) is the capital of the U.S. state of <span class="searchmatch">Maryland</span>, as well as the county seat of Anne Arundel County. Situated on the Chesapeake Bay</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="#" class="wsearch-result">
+            <div class="wsearch-result-a">
+              <h3>Annapolis, Maryland</h3>
+              <p><span class="searchmatch">Annapolis</span> (/əˈnæpəlᵻs/) is the capital of the U.S. state of <span class="searchmatch">Maryland</span>, as well as the county seat of Anne Arundel County. Situated on the Chesapeake Bay</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+          <a href="#" class="wsearch-result">
+            <div class="wsearch-result-b">
+              <h3>Annapolis, Maryland</h3>
+              <p><span class="searchmatch">Annapolis</span> (/əˈnæpəlᵻs/) is the capital of the U.S. state of <span class="searchmatch">Maryland</span>, as well as the county seat of Anne Arundel County. Situated on the Chesapeake Bay</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- footer -->

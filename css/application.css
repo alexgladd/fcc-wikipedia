@@ -8,12 +8,15 @@ body {
   margin-top: 40px;
 }
 
+main {
+  margin-top: 40px;
+}
+
 .wsearch-group {
   background-color: #C62E65;
   border-color: #C62E65;
   border-style: solid;
   border-width: 4px;
-  border-radius: 8px;
 }
 
 .wsearch-btn, .wsearch-btn:focus {
@@ -28,4 +31,34 @@ body {
   border-color: #F9B3D1;
   border-style: solid;
   border-width: 1px;
+}
+
+.fix-btn, .fix-btn:hover, .fix-btn:focus {
+  border-radius: 0px !important;
+}
+
+.wsearch-result {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.wsearch-result, .wsearch-result:hover, .wsearch-result:visited {
+  color: #1C2321 !important;
+  text-decoration: none !important;
+}
+
+.wsearch-result-a {
+  background-color: #F9B3D1;
+  padding: 10px;
+}
+
+.wsearch-result-b {
+  background-color: #FFCDB2;
+  padding: 10px;
+}
+
+.searchmatch {
+  color: #C62E65;
+  font-weight: bold;
 }
