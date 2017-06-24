@@ -1,0 +1,31 @@
+/* Wikipedia viewer CSS */
+/* Theme: https://coolors.co/1c2321-7d98a1-c62e65-f9b3d1-ffcdb2 */
+
+body {
+  color: #1C2321;
+  background-color: #7D98A1;
+  font-family: 'Itim', sans-serif;
+  margin-top: 40px;
+}
+
+.wsearch-group {
+  background-color: #C62E65;
+  border-color: #C62E65;
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 8px;
+}
+
+.wsearch-btn, .wsearch-btn:focus {
+  background-color: #C62E65;
+  border-color: #C62E65;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.wsearch-btn:hover {
+  background-color: #F9B3D1;
+  border-color: #F9B3D1;
+  border-style: solid;
+  border-width: 1px;
+}
