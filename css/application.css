@@ -19,7 +19,7 @@ main {
   border-width: 4px;
 }
 
-.wsearch-btn, .wsearch-btn:focus {
+.wsearch-btn, .wsearch-btn:focus, .wsearch-btn:disabled:hover {
   background-color: #C62E65;
   border-color: #C62E65;
   border-style: solid;
