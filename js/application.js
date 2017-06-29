@@ -9,6 +9,9 @@
 var wikiApiUri = "https://en.wikipedia.org/w/api.php?origin=*&action=query&list=search&format=json&utf8=&srlimit=9&srsearch=";
 var wikiLinkUri = "https://en.wikipedia.org/wiki/";
 
+var curResults;
+var curResultIndex;
+
 // jQuery start -------------------------------------------
 
 $(document).ready(function() {
@@ -36,6 +39,8 @@ function onSearch() {
   if (searchTxt) {
     // clear existing results
     $("#wsearch-results > .row").html("");
+    curResults = [];
+    curResultIndex = 0;
 
     // fire api request
     var uri = encodeURI(wikiApiUri + searchTxt);
@@ -47,11 +52,30 @@ function onSearch() {
 function onSearchResults(results) {
   console.log(results);
 
-  for (var i = 0; i < results.query.search.length; i++) {
-    var sresult = results.query.search[i];
-    console.log(sresult);
+  if (results.query.search && results.query.search.length > 0) {
+    curResults = results.query.search;
+    renderNextSearchResult();
+  }
 
-    $("#wsearch-results > .row").append(createSearchResult(sresult.title, sresult.snippet, i));
+  // for (var i = 0; i < results.query.search.length; i++) {
+  //   var sresult = results.query.search[i];
+  //   console.log(sresult);
+  //
+  //   $("#wsearch-results > .row").append(createSearchResult(sresult.title, sresult.snippet, i));
+  // }
+}
+
+function renderNextSearchResult() {
+  var sresult = curResults[curResultIndex];
+  console.log(sresult);
+
+  $("#wsearch-results > .row").append(createSearchResult(sresult.title, sresult.snippet, curResultIndex));
+
+  // set timer for next render
+  curResultIndex++;
+
+  if (curResultIndex < curResults.length) {
+    setTimeout(renderNextSearchResult, 333);
   }
 }
 
@@ -74,7 +98,7 @@ function createSearchResult(title, snippet, index) {
   $link.append($resultCard);
   $result.append($link);
 
-  console.log($result);
+  // console.log($result);
 
   return $result;
 }
