@@ -1,6 +1,30 @@
 /* Wikipedia viewer CSS */
 /* Theme: https://coolors.co/1c2321-7d98a1-c62e65-f9b3d1-ffcdb2 */
 
+@media (max-width: 767px) {
+  .wsearch-result  {
+    height: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wsearch-result {
+    height: 175px;
+  }
+}
+
+@media (min-width: 992px) {
+  .wsearch-result {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wsearch-result {
+    height: 175px;
+  }
+}
+
 body {
   color: #1C2321;
   background-color: #7D98A1;
@@ -42,6 +66,10 @@ main {
   display: block;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.wsearch-result div {
+  height: 100%;
 }
 
 .wsearch-result, .wsearch-result:hover, .wsearch-result:visited {
