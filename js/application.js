@@ -84,6 +84,7 @@ function createSearchResult(title, snippet, index) {
   var $link = $("<a></a>")
     .attr("href", encodeURI(wikiLinkUri + title))
     .attr("target", "_blank")
+    .attr("rel", "noopener")
     .addClass("wsearch-result");
 
   var cardClass = (index % 2 == 0) ? "wsearch-result-a" : "wsearch-result-b";
